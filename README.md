@@ -8,6 +8,7 @@ seafile 升级一键脚本，自动检测官网最新版本并下载升级到最
 * 理论上适配 Ubuntu 16.04、Debian 9、CentOS 7（已测试通过）。
 * 支持 systemctl 启动方式，如无配置 systemctl，脚本会自动识别使用 seafile 官方启动脚本停止或启动 seafile。
 * 自动识别大版本或小版本升级。
+* 支持开启了 SELinux 的权限自动修复。
 
 # 使用方法
 1. 下载脚本到 seafile 程序目录
