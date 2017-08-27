@@ -1,4 +1,4 @@
-# seafile-server-upgrade
+# seafile-server-upgrade(仅适用于社区版，企业版找官方升级去）
 seafile 升级一键脚本，自动检测官网最新版本并下载升级到最新版。
 升级前建议到查看下[版本更新日志](https://manual.seafile.com/changelog/server-changelog.html)，有可能加入新的依赖，本脚本不会解决依赖，只会运行 seafile 升级脚本。
 
