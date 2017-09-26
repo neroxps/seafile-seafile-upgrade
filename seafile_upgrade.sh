@@ -28,10 +28,10 @@ function seafile_new_version_chack() {
 	which curl > /dev/null  2>&1
 	curl=$?
 	if [[ $wget -eq 0 ]]; then
-		addr=$(wget -q https://www.seafile.com/download/ -O - | grep -o -P "$regexp" | head -1)
+		addr=$(wget -q https://www.seafile.com/download/ -O - | grep -o -P "$regexp" | tail -n 1)
 		web_seafile_version=$(echo $addr | awk -F '_' '{print $2}')
 	elif [[ $curl -eq 0 ]] ; then
-		addr=$(curl -Ls https://www.seafile.com/download/ | grep -o -P "$regexp" | head -1)
+		addr=$(curl -Ls https://www.seafile.com/download/ | grep -o -P "$regexp" | tail -n 1)
 		web_seafile_version=$(echo $addr | awk -F '_' '{print $2}')
 	else
 		echo "本脚本依赖 wget 或 curl，请安装此依赖程序。"
@@ -332,6 +332,3 @@ seafile_control start
 echo "seafile 升级完毕,bay!"
 clean_tmp
 exit 0
-
-
-
