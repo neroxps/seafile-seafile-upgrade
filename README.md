@@ -24,6 +24,6 @@ sudo ./seafile_upgrade.sh
 ```
 
 # 故障处理
-按照正常部署的 seafile 升级不大可能会遇到错误，但遇到错误不需要慌，脚本会自动备份好升级前的数据库，您只需要将数据库恢复，将在 installed 目录下的 `seafile-server-*.*.*（升级前的版本号）`目录迁移会 seafile 程序目录，修复 seafile-server-latest 软连接即可恢复。
+按照正常部署的 seafile 升级不大可能会遇到错误，但遇到错误不需要慌，脚本会自动备份好升级前的数据库，您只需要将数据库恢复，将在 installed 目录下的 `seafile-server-*.*.*（升级前的版本号）`目录迁移回 seafile 程序目录，修复 seafile-server-latest 软连接即可恢复。
 
 另你也可以将升级脚本的错误发到[seafile 论坛](https://bbs.seafile.com) 集群众之力一齐解决吧？
